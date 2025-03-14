@@ -32,7 +32,7 @@ This project aims to uncover the real impact of coffee and water consumption on 
 	•	Use data visualization to identify trends and correlations.
 	•	Apply DSA210 concepts to a real-world dataset based on personal habits.
 
-## Motivation
+# Motivation
 
 **Personal Curiosity**
 
@@ -51,29 +51,25 @@ Ultimately, my goal is to identify actionable insights that help me optimize my 
 
 # Data Collection
 
-# **Beverage Consumption**
+## **Beverage Consumption**
+- **Coffee Intake (ml):** Total amount of coffee consumed that day, manually recorded.
+- **Caffeine Intake (mg):** Estimated caffeine amount based on the type and volume of coffee.
+- **Water Intake (ml):** Total amount of water consumed per day.
+- **Sugar Intake from Coffee (mg):** Amount of sugar added to coffee, manually recorded.
 
-- Coffee Intake (ml)
-- Caffeine Intake (mg)
-- Water Intake (ml)
-- Sugar Intake from Coffee (mg)
+## **Focus and Cognitive Performance**
+- **Focus Duration (min):** Total time spent in focused work, measured using the Pomodoro technique.
+- **Screen Time (min):** Total daily screen time, recorded via phone settings.
 
-# **Focus and Cognitive Performance**
+## **Sleep Patterns**
+- **Sleep Start Time:** The exact time the user went to sleep, recorded from a smartwatch.
+- **Sleep End Time:** The exact time the user woke up, recorded from a smartwatch.
+- **Total Sleep Duration (hours):** The total duration of sleep for that night, retrieved from a smartwatch.
+- **Sleep Quality (%):** Percentage-based metric evaluating sleep efficiency, recorded from a smartwatch.
+- **Last Coffee Intake Before Bed (hours before sleep):** Time elapsed between the last coffee consumed and sleep onset.
 
-- Focus Duration (min)
-- Screen Time (min)
-
-# **Sleep Patterns**
-
-- Sleep Start Time
-- Sleep End Time
-- Total Sleep Duration (hours)
-- Sleep Quality (%)
-- Last Coffee Intake Before Bed (hours before sleep)
-
-# **Environmental Factors**
-
-- Ambient Temperature (°C)
+## **Environmental Factors**
+- **Ambient Temperature (°C):** The daily average temperature, retrieved from a weather API.
 
 # Example Data Table
 
