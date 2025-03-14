@@ -73,7 +73,7 @@ Ultimately, my goal is to identify actionable insights that help me optimize my 
 
 # **Environmental Factors**
 
--Ambient Temperature (°C)
+- Ambient Temperature (°C)
 
 # Example Data Table
 
