@@ -23,14 +23,14 @@ This project aims to uncover the real impact of coffee and water consumption on 
 # Objectives
 
 **Understanding the Impact of Beverage Consumption on Focus & Sleep**
-	•	Analyze how coffee and water intake influence focus duration and sleep quality.
-	•	Assess whether coffee timing affects sleep efficiency.
-	•	Determine if higher water intake enhances cognitive performance and sleep duration.
+- Analyze how coffee and water intake influence focus duration and sleep quality.
+- Assess whether coffee timing affects sleep efficiency.
+- Determine if higher water intake enhances cognitive performance and sleep duration.
 
 **Applying Data Science Techniques**
-	•	Conduct statistical analysis and hypothesis testing.
-	•	Use data visualization to identify trends and correlations.
-	•	Apply DSA210 concepts to a real-world dataset based on personal habits.
+- Conduct statistical analysis and hypothesis testing.
+- Use data visualization to identify trends and correlations.
+- Apply DSA210 concepts to a real-world dataset based on personal habits.
 
 # Motivation
 
