@@ -51,19 +51,19 @@ Ultimately, my goal is to identify actionable insights that help me optimize my 
 
 # Data Collection
 
-**Beverage Consumption**
+# **Beverage Consumption**
 
 - Coffee Intake (ml)
 - Caffeine Intake (mg)
 - Water Intake (ml)
 - Sugar Intake from Coffee (mg)
 
-**Focus and Cognitive Performance**
+# **Focus and Cognitive Performance**
 
 - Focus Duration (min)
 - Screen Time (min)
 
-**Sleep Patterns**
+# **Sleep Patterns**
 
 - Sleep Start Time
 - Sleep End Time
@@ -71,11 +71,11 @@ Ultimately, my goal is to identify actionable insights that help me optimize my 
 - Sleep Quality (%)
 - Last Coffee Intake Before Bed (hours before sleep)
 
-**Environmental Factors**
+# **Environmental Factors**
 
 -Ambient Temperature (°C)
 
-## Example Data Table
+# Example Data Table
 
 | Date  | Coffee (ml) | Caffeine (mg) | Water (ml) | Focus (min) | Screen Time (min) | Sleep Start | Sleep End | Sleep (hrs) | Sleep Quality (%) | Last Coffee (hrs before sleep) | Temperature (°C) | Sugar (mg) |
 |--------|------------|---------------|------------|-------------|----------------|-------------|-------------|--------------|------------------|-----------------------------|----------------|------------|
