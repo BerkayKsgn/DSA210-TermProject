@@ -86,4 +86,4 @@ The preprocessing was performed in data_process.ipynb, and the cleaned dataset i
 ## 1. Variable Distributions
    -  Distribution of Daily Focus Duration
       Displays how focus time is distributed across days.
-      ![Focus Distribution](images/)
+      ![Focus Distribution](images/distribution-of-daily-focus-duration.png)
