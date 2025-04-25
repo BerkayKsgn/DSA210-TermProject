@@ -198,10 +198,12 @@ High coffee days show shorter and more varied sleep durations.
 ###  Hypothesis 1 — Does high coffee intake reduce sleep duration?
 
 **Null Hypothesis (H₀):** There is no difference in sleep duration between high coffee days (>600ml) and low coffee days.  
+
 **Alternative Hypothesis (H₁):** Sleep duration is significantly lower on high coffee days.
 
 - **T-statistic** = -3.304  
 - **P-value** = 0.002  
+
 ✅ **Result:** Statistically significant at the 0.05 level.
 
 **Interpretation:** On days I consumed more than 600 ml of coffee, my sleep duration significantly dropped. This suggests high caffeine intake may impair sleep, likely due to its stimulant effect on the nervous system.
@@ -211,10 +213,12 @@ High coffee days show shorter and more varied sleep durations.
 ###  Hypothesis 2 — Does high water intake increase focus duration?
 
 **Null Hypothesis (H₀):** Focus durations are the same regardless of whether I drank more than 1200ml of water.  
+
 **Alternative Hypothesis (H₁):** Focus duration is higher on days with high water intake.
 
 - **T-statistic** = -0.094  
 - **P-value** = 0.926  
+
 ❌ **Result:** Not statistically significant.
 
 **Interpretation:** Despite a common belief that better hydration leads to higher cognitive performance, my data did not show a significant difference in focus duration on high-water days.
@@ -224,10 +228,12 @@ High coffee days show shorter and more varied sleep durations.
 ###  Hypothesis 3 — Does high sugar intake negatively affect focus?
 
 **Null Hypothesis (H₀):** Focus duration does not differ between high sugar (>35mg) and low sugar days.  
+
 **Alternative Hypothesis (H₁):** Focus duration is significantly lower on high sugar intake days.
 
 - **T-statistic** = 2.286  
 - **P-value** = 0.029  
+
 ✅ **Result:** Statistically significant at the 0.05 level.
 
 **Interpretation:** When my sugar intake exceeded 35 mg (mostly via sweetened coffee), my focus durations were significantly shorter. This may indicate that sugar spikes and subsequent energy crashes can hinder sustained cognitive performance, despite caffeine intake.
@@ -241,7 +247,9 @@ This project analyzed the impact of daily coffee, water, and sugar intake on foc
 ---
 
 ###  Hypothesis 1 — High Coffee Intake Reduces Sleep Duration  
+
 - **T-statistic:** -3.304  **P-value:** 0.002  
+
 ✅ **Statistically significant**
 
 **Insight:** On days when I consumed over 600ml of coffee, I experienced a significant decrease in sleep duration. This supports the well-known stimulant effects of caffeine, especially when consumed later in the day.
@@ -249,7 +257,9 @@ This project analyzed the impact of daily coffee, water, and sugar intake on foc
 ---
 
 ###  Hypothesis 2 — High Water Intake Increases Focus Duration  
+
 - **T-statistic:** -0.094  **P-value:** 0.926  
+
 ❌ **Not statistically significant**
 
 **Insight:** Hydration is often associated with better cognitive performance, but my data did not support this link. Focus durations were similar regardless of water intake levels.
@@ -257,7 +267,9 @@ This project analyzed the impact of daily coffee, water, and sugar intake on foc
 ---
 
 ###  Hypothesis 3 — High Sugar Intake Negatively Affects Focus  
+
 - **T-statistic:** 2.286  **P-value:** 0.029  
+
 ✅ **Statistically significant**
 
 **Insight:** Higher sugar intake (>35mg) was associated with shorter focus durations. This suggests that excessive sugar, often consumed through sweetened coffee, may counteract the positive effects of caffeine on productivity.
@@ -271,6 +283,7 @@ This project analyzed the impact of daily coffee, water, and sugar intake on foc
 - **Sugar**, when consumed in higher quantities, **reduced productivity** and may impair concentration.  
 
 ###  Suggestions for Further Study
+
 - Track physical activity, stress levels, or meal timing as confounding variables.
 - Apply regression models to quantify the individual contribution of variables.
 - Expand the dataset beyond a single person and over a longer time frame for broader generalization.
