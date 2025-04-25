@@ -12,7 +12,7 @@ In this project, I will analyze the relationship between coffee and water consum
 5. [Data Preprocessing](#data-preprocessing)  
 6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 7. [Hypothesis Testing](#hypothesis-testing)  
-8. [Conclusion](#-conclusion)
+8. [Conclusion](#conclusion)
    
 # Project Overview
 
