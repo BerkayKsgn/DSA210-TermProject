@@ -83,7 +83,7 @@ The preprocessing was performed in data_process.ipynb, and the cleaned dataset i
 - Missing Value Check: No null values were found in the final dataset.
 
   
-# 📊 Exploratory Data Analysis (EDA)
+#  Exploratory Data Analysis (EDA)
 
 ## 1. Variable Distributions
 
@@ -112,3 +112,71 @@ Shows how many hours of sleep were recorded per day. Peaks can reveal common sle
 Visualizes the distribution of daily coffee consumption. Useful for identifying high caffeine days and potential overconsumption patterns.
   
 ![Coffee Distribution](images/Distribution%20of%20Daily%20Coffee%20Intake.png)
+
+---
+
+##  2. Time Trends & Correlation Patterns
+
+### • Focus and Sleep Duration Over Time  
+A dual-axis line chart that visualizes how focus (in minutes) and sleep (in minutes) fluctuate day by day.
+
+![Focus and Sleep Over Time](images/Focus%20and%20Sleep%20Duration%20Over%20Time%20(in%20Minutes).png)
+
+---
+
+### • Correlation Between Key Variables  
+Displays Pearson correlation coefficients between coffee, water, sleep, and focus variables.  
+Blue means negative correlation, red means positive. Helps identify strong linear relationships.
+
+![Correlation Heatmap](images/Correlation%20Between%20Focus%2C%20Sleep%20and%20Consumption%20Variables.png)
+
+---
+
+##  3. Sugar Intake and Focus Duration
+
+### • Distribution of Focus Duration by Sugar Intake  
+Histogram comparing focus levels for high-sugar (red) vs low-sugar (blue) days.  
+Highlights how added sugar might influence cognitive performance.
+
+![Sugar Histogram](images/Distribution%20of%20Focus%20Duration%20by%20Sugar%20Intake.png)
+
+---
+
+### • Correlation Between Sugar Intake and Focus Duration  
+Heatmap showing the linear relationship between sugar and focus.
+
+![Sugar Correlation](images/Correlation%20Between%20Sugar%20Intake%20and%20Focus%20Duration.png)
+
+---
+
+### • Focus Duration vs High Sugar Intake (Boxplot)  
+Boxplot comparison of focus levels between days with high (>35mg) and low sugar.  
+Shows that sugar-heavy days might reduce focus consistency.
+
+![Boxplot](images/Focus%20Duration%20vs%20High%20Sugar%20Intake.png)
+
+---
+
+### • Individual Focus Durations by Sugar Group  
+Each dot represents daily focus minutes, grouped by sugar category.  
+Shows how outliers and trends differ between high and low sugar consumption.
+
+![Scatterplot](images/Individual%20Focus%20Durations%20by%20Sugar%20Group.png)
+
+---
+
+##  4. Water & Coffee Effects on Sleep and Focus
+
+### • Focus Duration vs High Water Intake  
+Compare focus durations between days with more or less than 1200 ml of water.  
+Helps assess the potential impact of hydration on productivity.
+
+![Water Focus](images/Focus%20Duration%20vs%20High%20Water%20Intake.png)
+
+---
+
+### • Effect of High Coffee Intake on Sleep Duration  
+Boxplot showing how sleep hours vary depending on coffee intake (>600 ml).  
+High coffee days show shorter and more varied sleep durations.
+
+![Coffee Sleep](images/Effect%20of%20High%20Coffee%20Intake%20on%20Sleep%20Duration.png)
