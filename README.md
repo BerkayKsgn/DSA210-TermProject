@@ -83,32 +83,32 @@ The preprocessing was performed in data_process.ipynb, and the cleaned dataset i
 - Missing Value Check: No null values were found in the final dataset.
 
   
-## 📊 Exploratory Data Analysis (EDA)
+# 📊 Exploratory Data Analysis (EDA)
 
-### 1. Variable Distributions
+## 1. Variable Distributions
 
-#### • Distribution of Daily Focus Duration  
+### • Distribution of Daily Focus Duration  
 Displays how focus time is distributed across days.
-
-![Focus Distribution](images/Distribution-of-Daily-Focus-Duration.png)
+  
+![Focus Distribution](images/Distribution%20of%20Daily%20Focus%20Duration.png)
 
 ---
 
-#### • Distribution of Daily Water Intake  
+### • Distribution of Daily Water Intake  
 Illustrates water consumption per day. Helps assess hydration habits and detect outliers.
-
-![Water Distribution](images/Distribution-of-Daily-Water-Intake.png)
+  
+![Water Distribution](images/Distribution%20of%20Daily%20Water%20Intake.png)
 
 ---
 
-#### • Distribution of Daily Sleep Hours  
+### • Distribution of Daily Sleep Hours  
 Shows how many hours of sleep were recorded per day. Peaks can reveal common sleep durations (e.g., 6–8 hours).
-
-![Sleep Distribution](images/Distribution-of-Daily-Sleep-Hours.png)
+  
+![Sleep Distribution](images/Distribution%20of%20Daily%20Sleep%20Hours.png)
 
 ---
 
-#### • Distribution of Daily Coffee Intake  
+### • Distribution of Daily Coffee Intake  
 Visualizes the distribution of daily coffee consumption. Useful for identifying high caffeine days and potential overconsumption patterns.
-
-![Coffee Distribution](images/Distribution-of-Daily-Coffee-Intake.png)
+  
+![Coffee Distribution](images/Distribution%20of%20Daily%20Coffee%20Intake.png)
