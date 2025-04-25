@@ -9,11 +9,8 @@ In this project, I will analyze the relationship between coffee and water consum
 2. [Objectives](#objectives)
 3. [Motivation](#motivation)
 4. [Data Collection & Sources](#data-collection)
-   - [Beverage Consumption](#beverage-consumption)
-   - [Focus and Cognitive Performance](#focus-and-cognitive-performance)
-   - [Sleep Patterns](#sleep-patterns)
-   - [Environmental Factors](#environmental-factors)
-
+5. [Data Preprocessing] (#data-preprocessing)
+   
 # Project Overview
 
 Coffee is often associated with improved focus and productivity, while excessive intake may disrupt sleep. Likewise, proper hydration plays a crucial role in cognitive performance and well-being. But how do these factors interact?
@@ -71,14 +68,16 @@ Ultimately, my goal is to identify actionable insights that help me optimize my 
 ## **Environmental Factors**
 - **Ambient Temperature (°C):** The daily average temperature, retrieved from a weather API.
 
-# Example Data Table
+# Data Preprocessing
 
-| Date  | Coffee (ml) | Caffeine (mg) | Water (ml) | Focus (min) | Screen Time (min) | Sleep Start | Sleep End | Sleep (hrs) | Sleep Quality (%) | Last Coffee (hrs before sleep) | Temperature (°C) | Sugar (mg) |
-|--------|------------|---------------|------------|-------------|----------------|-------------|-------------|--------------|------------------|-----------------------------|----------------|------------|
-| 10 Mar | 500        | 150           | 1000       | 180         | 240            | 23:30       | 07:30       | 8.0          | 85%              | 5                           | 15°C           | 20         |
-| 11 Mar | 750        | 225           | 500        | 200         | 300            | 00:00       | 06:30       | 6.5          | 78%              | 3                           | 18°C           | 30         |
-| 12 Mar | 300        | 90            | 1500       | 210         | 180            | 22:45       | 07:00       | 8.25         | 90%              | 6                           | 12°C           | 15         |
-| 13 Mar | 600        | 180           | 1200       | 195         | 220            | 23:00       | 07:15       | 8.25         | 88%              | 4                           | 14°C           | 25         |
-| 14 Mar | 400        | 120           | 1300       | 175         | 260            | 23:45       | 06:45       | 7.0          | 82%              | 5                           | 16°C           | 18         |
-| 15 Mar | 800        | 240           | 700        | 210         | 350            | 00:30       | 06:00       | 5.5          | 70%              | 2                           | 20°C           | 35         |
-| 16 Mar | 550        | 165           | 1400       | 195         | 200            | 22:30       | 07:30       | 9.0          | 92%              | 6                           | 13°C           | 22         |
+The preprocessing was performed in data_process.ipynb, and the cleaned dataset is stored as cleaned_focus_sleep_data.xlsx.
+
+- Datetime Parsing: Sleep start/end times were converted to datetime format to calculate Sleep (hrs).
+- Feature Engineering: New binary columns were added:
+  -	High Coffee → coffee > 600 ml
+  -	High Water → water > 1200 ml
+  -	High Focus → focus > 300 minutes
+
+- Time Features: Extracted Sleep Start Hour and Sleep End Hour for pattern analysis.
+- Column Reordering: Columns were rearranged for better readability and analysis compatibility.
+- Missing Value Check: No null values were found in the final dataset.
