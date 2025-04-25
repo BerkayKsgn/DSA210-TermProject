@@ -81,3 +81,9 @@ The preprocessing was performed in data_process.ipynb, and the cleaned dataset i
 - Time Features: Extracted Sleep Start Hour and Sleep End Hour for pattern analysis.
 - Column Reordering: Columns were rearranged for better readability and analysis compatibility.
 - Missing Value Check: No null values were found in the final dataset.
+
+# Exploratory Data Analysis (EDA)
+## 1. Variable Distributions
+   -  Distribution of Daily Focus Duration
+      Displays how focus time is distributed across days.
+      ![Focus Distribution](images/)
