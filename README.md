@@ -87,3 +87,12 @@ The preprocessing was performed in data_process.ipynb, and the cleaned dataset i
    -  Distribution of Daily Focus Duration
       Displays how focus time is distributed across days.
       ![Focus Distribution](images/distribution-of-daily-focus-duration.png)
+   -  Distribution of Daily Water Intake
+      Illustrates water consumption per day. Helps assess hydration habits and detect outliers.
+      ![Water Distribution](images/distribution-of-daily-water-intake.png)
+   -  Distribution of Daily Sleep Hours
+      Shows how many hours of sleep were recorded per day. Peaks can reveal common sleep durations (e.g., 6–8 hours).
+      ![Sleep Distribution](images/distribution-of-daily-sleep-hours.png)
+   -  Distribution of Daily Coffee Intake
+      Visualizes the distribution of daily coffee consumption. Useful for identifying high caffeine days and potential overconsumption patterns.
+      ![Coffee Distribution](images/distribution-of-daily-coffee-intake.png)
