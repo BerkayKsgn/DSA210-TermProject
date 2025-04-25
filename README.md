@@ -8,7 +8,7 @@ In this project, I will analyze the relationship between coffee and water consum
 1. [Project Overview](#project-overview)  
 2. [Objectives](#objectives)  
 3. [Motivation](#motivation)  
-4. [Data Collection & Sources](#data-collection--sources)  
+4. [Data Collection & Sources](#data-collection)  
 5. [Data Preprocessing](#data-preprocessing)  
 6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 7. [Hypothesis Testing](#hypothesis-testing)  
