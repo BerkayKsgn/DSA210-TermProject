@@ -354,7 +354,7 @@ We tested three different regression models to predict how coffee consumption af
 
 ---
 
-### 📊 Visualizing the Relationship
+###  Visualizing the Relationship
 
 Scatterplot showing the raw relationship between coffee intake and sleep duration:
 
@@ -362,7 +362,7 @@ Scatterplot showing the raw relationship between coffee intake and sleep duratio
 
 ---
 
-### 📈 Model 1: Linear Regression
+###  Model 1: Linear Regression
 
 A linear regression line was fitted to understand the trend.
 
@@ -381,7 +381,7 @@ A linear regression line was fitted to understand the trend.
 
 ---
 
-### 📉 Model 2: KNN Regressor
+###  Model 2: KNN Regressor
 
 The K-Nearest Neighbors Regressor model captured local patterns but performed poorly overall.
 
@@ -395,7 +395,7 @@ The K-Nearest Neighbors Regressor model captured local patterns but performed po
 
 ---
 
-### 🌲 Model 3: Random Forest Regressor
+###  Model 3: Random Forest Regressor
 
 The Random Forest model performed better than KNN, capturing more complex relationships.
 
@@ -409,7 +409,7 @@ The Random Forest model performed better than KNN, capturing more complex relati
 
 ---
 
-### 📊 H1 Model Performance Comparison
+###  H1 Model Performance Comparison
 
 The chart below compares the performance of all three models using MAE, RMSE, and R² Score:
 
@@ -423,7 +423,7 @@ The chart below compares the performance of all three models using MAE, RMSE, an
 - **KNN Regressor** struggled, likely due to the small sample size and lack of local structure.
 - **Random Forest** improved upon KNN but didn’t outperform linear regression in this case.
 
-📌 **Conclusion:**  
+ **Conclusion:**  
 The models support the hypothesis that **coffee intake is negatively associated with sleep duration**, with linear regression providing the clearest evidence.
 
 ---
@@ -445,7 +445,7 @@ We evaluated three models for this hypothesis:
 | KNN Regressor (k=3) | 48.22  | 58.96  | 0.178    |
 | Random Forest       | 44.43  | 53.69  | 0.320    |
 
-#### 📈 Model Comparison Chart
+####  Model Comparison Chart
 
 This grouped bar chart compares all three regression models using key error metrics (MAE, RMSE, R²).  
 Random Forest performs the best with the lowest MAE and highest R² score.
@@ -454,7 +454,7 @@ Random Forest performs the best with the lowest MAE and highest R² score.
 
 ---
 
-### 📉 Visualization – Raw Relationship
+###  Visualization – Raw Relationship
 
 A simple scatterplot shows the raw relationship between **Water Intake (ml)** and **Focus Duration (min)**.  
 The lack of strong visual trend supports our earlier statistical test result.
@@ -463,7 +463,7 @@ The lack of strong visual trend supports our earlier statistical test result.
 
 ---
 
-### 📊 Linear Regression – Water vs Focus
+###  Linear Regression – Water vs Focus
 
 This plot overlays the regression line on top of the scatterplot.  
 The slope is slightly negative, and R² is very low (≈ 0.01), indicating a poor fit.
@@ -472,12 +472,12 @@ The slope is slightly negative, and R² is very low (≈ 0.01), indicating a poo
 
 ---
 
-### 🔶 KNN Regressor – Actual vs Predicted
+###  KNN Regressor – Actual vs Predicted
 
 The following scatterplot compares actual vs predicted focus durations for KNN (k=3).  
 Although there's slight clustering along the diagonal, large deviations remain.
 
-📉 **KNN Regressor (H2 – Water vs Focus):**  
+ **KNN Regressor (H2 – Water vs Focus):**  
 - MAE: 48.22  
 - RMSE: 58.96  
 - R² Score: 0.178
@@ -486,12 +486,12 @@ Although there's slight clustering along the diagonal, large deviations remain.
 
 ---
 
-### 🔵 Random Forest – Actual vs Predicted
+###  Random Forest – Actual vs Predicted
 
 This scatter plot compares actual vs predicted focus durations for the Random Forest Regressor.  
 The fit is slightly better, but many points still lie far from the ideal diagonal.
 
-📉 **Random Forest Regressor (H2 – Water vs Focus):**  
+ **Random Forest Regressor (H2 – Water vs Focus):**  
 - MAE: 44.43  
 - RMSE: 53.69  
 - R² Score: 0.320
@@ -505,7 +505,7 @@ The fit is slightly better, but many points still lie far from the ideal diagona
 Although **Random Forest performed best**, **all models had weak R² scores**, suggesting that **water intake alone is not a strong predictor** of focus duration.  
 This aligns with our earlier hypothesis testing, which found **no significant difference** in focus between high and low hydration days.
 
-🔍 **Future Improvement:**  
+ **Future Improvement:**  
 Combining water intake with **other features** (e.g., sleep quality, coffee intake, screen time) in a **multi-variable model** may yield better predictive power.
 
 ---
@@ -523,12 +523,12 @@ To classify whether a day is a **high focus day** (focus duration > 300 min), we
 - Screen Time  
 - Ambient Temperature  
 
-### 📌 Target Variable:
+###  Target Variable:
 `High Focus (1 = Yes, 0 = No)`
 
 ---
 
-### 🧪 Models Trained:
+###  Models Trained:
 
 1. **Logistic Regression**
 2. **K-Nearest Neighbors (K=5 and tuned K=2)**
@@ -538,7 +538,7 @@ Each model was evaluated on **Accuracy**, **Recall**, and **F1-Score**.
 
 ---
 
-### 🔍 Model Comparison Chart
+###  Model Comparison Chart
 
 The bar chart below compares the performance of all models:
 
@@ -546,7 +546,7 @@ The bar chart below compares the performance of all models:
 
 ---
 
-### ✅ Logistic Regression
+###  Logistic Regression
 
 **Confusion Matrix:**
 
@@ -557,12 +557,12 @@ The bar chart below compares the performance of all models:
 - **Recall (High):** 0.60  
 - **F1-Score (High):** 0.60
 
-🧠 **Interpretation:**  
+ **Interpretation:**  
 Logistic regression offered balanced performance with solid generalization. Coefficients can also be interpreted for feature importance.
 
 ---
 
-### ✅ K-Nearest Neighbors (K = 5)
+###  K-Nearest Neighbors (K = 5)
 
 **Confusion Matrix:**
 
@@ -574,7 +574,7 @@ Logistic regression offered balanced performance with solid generalization. Coef
 
 ---
 
-### ✅ K-Nearest Neighbors (Tuned K = 2)
+###  K-Nearest Neighbors (Tuned K = 2)
 
 **Confusion Matrix:**
 
@@ -584,12 +584,12 @@ Logistic regression offered balanced performance with solid generalization. Coef
 - **Recall (High):** 0.40  
 - **F1-Score (High):** 0.36
 
-🧪 **Interpretation:**  
+ **Interpretation:**  
 After tuning, KNN improved in accuracy, but recall and precision remained lower than Logistic Regression.
 
 ---
 
-### ✅ Random Forest Classifier
+### Random Forest Classifier
 
 **Confusion Matrix:**
 
@@ -599,12 +599,12 @@ After tuning, KNN improved in accuracy, but recall and precision remained lower 
 - **Recall (High):** 0.60  
 - **F1-Score (High):** 0.50
 
-🌲 **Interpretation:**  
+ **Interpretation:**  
 Random Forest managed to **recall most high focus days**, but performance on low focus days was weak. Great for minimizing false negatives.
 
 ---
 
-### 📊 Summary
+###  Summary
 
 | Model               | Accuracy | Recall (High) | F1-Score (High) |
 |--------------------|----------|----------------|------------------|
@@ -614,7 +614,7 @@ Random Forest managed to **recall most high focus days**, but performance on low
 
 ---
 
-### 🧩 Conclusion
+###  Conclusion
 
 - **Logistic Regression** achieved the most balanced classification performance.
 - **Random Forest** had strong recall, useful when minimizing false negatives (missing high focus days).
