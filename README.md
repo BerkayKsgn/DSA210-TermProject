@@ -13,6 +13,7 @@ In this project, I will analyze the relationship between coffee and water consum
 6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 7. [Hypothesis Testing](#hypothesis-testing)  
 8. [Conclusion](#conclusion)
+9. [Machine Learning](#machine-learning-ml-analysis)
    
 # Project Overview
 
@@ -277,3 +278,346 @@ This project analyzed the impact of daily coffee, water, and sugar intake on sle
 - Apply regression models to isolate the effects of each variable.  
 - Collect data over a longer period and across multiple individuals to improve generalizability.  
 - Integrate physiological measures (e.g., heart rate, cortisol levels) for a more complete picture.
+
+---
+
+# Machine Learning (ML) Analysis
+
+In this section, we apply **machine learning models** to better understand and predict how different daily habits—such as coffee, water, and sugar intake—affect **focus** and **sleep**. Each **hypothesis** is modeled and evaluated using relevant supervised learning techniques, including both **classification** and **regression**.
+
+---
+
+###  ML Objective
+
+To supplement statistical hypothesis testing with **predictive modeling**, we used machine learning algorithms to:
+
+- Classify whether a day would be **high focus** or not (binary classification)
+- Predict **sleep duration** and **focus duration** using real-valued input features (regression)
+
+By evaluating models on performance metrics such as **Accuracy**, **Recall**, **F1-Score**, **MAE**, **RMSE**, and **R²**, we aim to quantify how much predictive signal exists in our behavioral features.
+
+---
+
+### ML Hypotheses Modeled
+
+| Hypothesis Code | Description                                         | Type         | Target Variable           |
+|------------------|-----------------------------------------------------|--------------|----------------------------|
+| **H1**           | Does high coffee intake reduce sleep duration?      | Regression   | `Sleep Duration (hrs)`     |
+| **H2**           | Does high water intake increase focus duration?     | Regression   | `Focus Duration (min)`     |
+| **H3**           | Does sugar intake affect focus classification?      | Classification | `High Focus (0/1)`       |
+
+---
+
+###  Models Used
+
+- **Linear Regression**: for baseline regression analysis  
+- **K-Nearest Neighbors (KNN)**: simple, distance-based classifier/regressor  
+- **Random Forest**: an ensemble method for handling nonlinear relationships  
+- **Logistic Regression**: probabilistic binary classifier (for H3 only)
+ 
+###  How Results Are Presented
+
+Each hypothesis below is explored in the following structure:
+
+1.  **Problem Setup**  
+   — What we're trying to predict, and why it matters
+
+2.  **Model Training & Evaluation**  
+   — Key metrics like MAE, RMSE, Accuracy, F1, R² Score
+
+3.  **Visual Aids**  
+   — Confusion matrices for classifiers  
+   — Scatterplots and regression lines for regressors  
+   — Bar charts comparing model performance side by side
+
+4.  **Interpretation & Comparison**  
+   — Which models performed best and why  
+   — Whether the predictive results support or challenge the statistical hypothesis
+
+---
+
+## Machine Learning: Predicting Sleep Duration (H1)
+
+### Hypothesis 1 — Does High Coffee Intake Reduce Sleep Duration?
+
+This hypothesis explores whether **higher coffee intake is associated with reduced sleep duration**.
+
+We treat this as a **regression problem**, modeling:
+
+- **Input Feature (X):** Coffee Intake (ml)
+- **Target Variable (Y):** Sleep Duration (hrs)
+
+We tested three different regression models to predict how coffee consumption affects sleep:
+- **Linear Regression**
+- **KNN Regressor**
+- **Random Forest Regressor**
+
+---
+
+### 📊 Visualizing the Relationship
+
+Scatterplot showing the raw relationship between coffee intake and sleep duration:
+
+![Coffee Intake vs Sleep Duration](images/Coffee%20intake%20vs%20sleep%20duration.png)
+
+---
+
+### 📈 Model 1: Linear Regression
+
+A linear regression line was fitted to understand the trend.
+
+- **Intercept (b₀):** 10.247  
+- **Coefficient (b₁):** -0.003
+
+> For every additional 100 ml of coffee, sleep duration drops by ~18 minutes.
+
+**Evaluation Metrics:**
+
+- MAE: 0.960  
+- RMSE: 1.237  
+- R² Score: 0.334
+
+![Linear Regression — Coffee vs Sleep](images/lineer%20regression%20-%20coffee%20intake%20vs%20sleep%20duration.png)
+
+---
+
+### 📉 Model 2: KNN Regressor
+
+The K-Nearest Neighbors Regressor model captured local patterns but performed poorly overall.
+
+**Evaluation Metrics:**
+
+- MAE: 62.78  
+- RMSE: 65.14  
+- R² Score: -0.004
+
+![KNN Regressor — Actual vs Predicted](images/KNN%20Regressor-%20Actual%20vs%20Predicted%20Sleep%20Duration%20(H1).png)
+
+---
+
+### 🌲 Model 3: Random Forest Regressor
+
+The Random Forest model performed better than KNN, capturing more complex relationships.
+
+**Evaluation Metrics:**
+
+- MAE: 50.03  
+- RMSE: 55.24  
+- R² Score: 0.278
+
+![Random Forest — Actual vs Predicted](images/Random%20Forest-%20Actual%20vs%20Predicted%20Sleep%20Duration%20(H1).png)
+
+---
+
+### 📊 H1 Model Performance Comparison
+
+The chart below compares the performance of all three models using MAE, RMSE, and R² Score:
+
+![Model Performance Comparison on H1](images/Model%20Performance%20Comparison%20on%20H1-%20Coffee%20Intake%20vs%20Sleep%20Duration.png)
+
+---
+
+### Interpretation
+
+- **Linear regression** had the best performance among the three, with the highest R² and lowest error.
+- **KNN Regressor** struggled, likely due to the small sample size and lack of local structure.
+- **Random Forest** improved upon KNN but didn’t outperform linear regression in this case.
+
+📌 **Conclusion:**  
+The models support the hypothesis that **coffee intake is negatively associated with sleep duration**, with linear regression providing the clearest evidence.
+
+---
+
+## Machine Learning: Predicting Focus Duration (H2)
+
+### Hypothesis 2 — Does High Water Intake Increase Focus Duration?
+
+This section tests the hypothesis that **increased water intake improves focus duration**.  
+We model this using regression techniques to predict daily **focus duration (in minutes)** based on **water consumption (ml)**.
+
+###  Models Applied
+
+We evaluated three models for this hypothesis:
+
+| Model               | MAE   | RMSE   | R² Score |
+|---------------------|--------|--------|----------|
+| Linear Regression   | 52.63  | 74.86  | 0.014    |
+| KNN Regressor (k=3) | 48.22  | 58.96  | 0.178    |
+| Random Forest       | 44.43  | 53.69  | 0.320    |
+
+#### 📈 Model Comparison Chart
+
+This grouped bar chart compares all three regression models using key error metrics (MAE, RMSE, R²).  
+Random Forest performs the best with the lowest MAE and highest R² score.
+
+![Model Comparison – H2](images/Model%20Performance%20Comparison%20on%20H2-%20Water%20Intake%20vs%20Focus%20Duration.png)
+
+---
+
+### 📉 Visualization – Raw Relationship
+
+A simple scatterplot shows the raw relationship between **Water Intake (ml)** and **Focus Duration (min)**.  
+The lack of strong visual trend supports our earlier statistical test result.
+
+![Scatter – Water vs Focus](images/Water%20Intake%20vs%20Focus%20Duration.png)
+
+---
+
+### 📊 Linear Regression – Water vs Focus
+
+This plot overlays the regression line on top of the scatterplot.  
+The slope is slightly negative, and R² is very low (≈ 0.01), indicating a poor fit.
+
+![Linear Regression – Water vs Focus](images/Linear%20Regression%20—%20Water%20vs%20Focus.png)
+
+---
+
+### 🔶 KNN Regressor – Actual vs Predicted
+
+The following scatterplot compares actual vs predicted focus durations for KNN (k=3).  
+Although there's slight clustering along the diagonal, large deviations remain.
+
+📉 **KNN Regressor (H2 – Water vs Focus):**  
+- MAE: 48.22  
+- RMSE: 58.96  
+- R² Score: 0.178
+
+![KNN Predicted vs Actual – H2](images/KNN%20Regressor-%20Actual%20vs%20Predicted%20Focus%20Duration%20(H2).png)
+
+---
+
+### 🔵 Random Forest – Actual vs Predicted
+
+This scatter plot compares actual vs predicted focus durations for the Random Forest Regressor.  
+The fit is slightly better, but many points still lie far from the ideal diagonal.
+
+📉 **Random Forest Regressor (H2 – Water vs Focus):**  
+- MAE: 44.43  
+- RMSE: 53.69  
+- R² Score: 0.320
+
+![Random Forest Predicted vs Actual – H2](images/Random%20Forest%20—%20Actual%20vs%20Predicted%20(H2).png)
+
+---
+
+###  Conclusion
+
+Although **Random Forest performed best**, **all models had weak R² scores**, suggesting that **water intake alone is not a strong predictor** of focus duration.  
+This aligns with our earlier hypothesis testing, which found **no significant difference** in focus between high and low hydration days.
+
+🔍 **Future Improvement:**  
+Combining water intake with **other features** (e.g., sleep quality, coffee intake, screen time) in a **multi-variable model** may yield better predictive power.
+
+---
+
+## Machine Learning: Predicting High Focus Days (H3)
+
+###  Hypothesis 3 — Does Sugar Intake Affect Focus Duration?
+
+To classify whether a day is a **high focus day** (focus duration > 300 min), we trained three classification models using behavioral data features such as:
+
+- Sugar Intake  
+- Coffee Intake  
+- Water Intake  
+- Sleep Duration  
+- Screen Time  
+- Ambient Temperature  
+
+### 📌 Target Variable:
+`High Focus (1 = Yes, 0 = No)`
+
+---
+
+### 🧪 Models Trained:
+
+1. **Logistic Regression**
+2. **K-Nearest Neighbors (K=5 and tuned K=2)**
+3. **Random Forest Classifier**
+
+Each model was evaluated on **Accuracy**, **Recall**, and **F1-Score**.
+
+---
+
+### 🔍 Model Comparison Chart
+
+The bar chart below compares the performance of all models:
+
+![Model Comparison](images/Model%20Performance%20Comparision%20H3.png)
+
+---
+
+### ✅ Logistic Regression
+
+**Confusion Matrix:**
+
+![Confusion Matrix - Logistic Regression](images/Confusion%20Matrix%20-%20Logistic%20Regression.png)
+
+- **Accuracy:** 0.56  
+- **Precision (High):** 0.60  
+- **Recall (High):** 0.60  
+- **F1-Score (High):** 0.60
+
+🧠 **Interpretation:**  
+Logistic regression offered balanced performance with solid generalization. Coefficients can also be interpreted for feature importance.
+
+---
+
+### ✅ K-Nearest Neighbors (K = 5)
+
+**Confusion Matrix:**
+
+![Confusion Matrix - KNN (k=5)](images/Confusion%20Matrix%20-%20KNN%20(k=5).png)
+
+- **Accuracy:** 0.22  
+- **Recall (High):** 0.40  
+- **F1-Score (High):** 0.36
+
+---
+
+### ✅ K-Nearest Neighbors (Tuned K = 2)
+
+**Confusion Matrix:**
+
+![Confusion Matrix - KNN (k=2)](images/Confision%20Matrix%20-%20KNN%20(k=2).png)
+
+- **Accuracy:** 0.56  
+- **Recall (High):** 0.40  
+- **F1-Score (High):** 0.36
+
+🧪 **Interpretation:**  
+After tuning, KNN improved in accuracy, but recall and precision remained lower than Logistic Regression.
+
+---
+
+### ✅ Random Forest Classifier
+
+**Confusion Matrix:**
+
+![Random Forest Confusion Matrix](images/Random%20Forest%20Confision%20Matrix.png)
+
+- **Accuracy:** 0.33  
+- **Recall (High):** 0.60  
+- **F1-Score (High):** 0.50
+
+🌲 **Interpretation:**  
+Random Forest managed to **recall most high focus days**, but performance on low focus days was weak. Great for minimizing false negatives.
+
+---
+
+### 📊 Summary
+
+| Model               | Accuracy | Recall (High) | F1-Score (High) |
+|--------------------|----------|----------------|------------------|
+| Logistic Regression | 0.56     | 0.60           | 0.60             |
+| KNN (k=2)           | 0.56     | 0.40           | 0.36             |
+| Random Forest       | 0.33     | 0.60           | 0.50             |
+
+---
+
+### 🧩 Conclusion
+
+- **Logistic Regression** achieved the most balanced classification performance.
+- **Random Forest** had strong recall, useful when minimizing false negatives (missing high focus days).
+- **KNN**, though simple, struggled with generalization unless properly tuned.
+
+---
